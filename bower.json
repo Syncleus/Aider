@@ -1,0 +1,8 @@
+{
+    "name" : "AIDE",
+    "version": "1.0.0",
+    "dependencies": {
+        "angular": "latest",
+        "normalize.css": "latest"
+    }
+}

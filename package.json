@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "mocha": "^2.2.5"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "h5bp-configs": {
+    "directories": {
+      "dist": "dist",
+      "test": "test"
+    }
+  },
+  "homepage": "https://www.syncleus.com/",
+  "license": {
+    "type": "Proprietary"
+  },
+  "name": "AIDE",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist/deps && bower update",
+    "test": "rm -rf dist/deps && bower update && mocha --reporter spec --timeout 5000"
+  },
+  "version": "1.0.0"
+}
