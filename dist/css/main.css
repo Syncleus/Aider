@@ -1,0 +1,18 @@
+.wrap-dd-menu .dropdown {
+    top: 100%;
+}
+
+.wrap-dd-menu {
+    width: 100%;
+    text-align: center;
+}
+
+.wrap-dd-menu .dropdown:before {
+    right: 50%;
+}
+
+.wrap-dd-menu .dropdown:after {
+    right: calc(50% + 2px);
+}
+
+
