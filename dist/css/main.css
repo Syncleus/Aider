@@ -15,4 +15,22 @@
     right: calc(50% + 2px);
 }
 
+.content {
+    margin-top: 40px;
+}
 
+.header {
+    height: 36px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.leftHeader {
+    width: 80%;
+}
+
+.rightHeader {
+    width: 20%;
+}
