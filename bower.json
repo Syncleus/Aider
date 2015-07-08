@@ -8,6 +8,7 @@
         "font-awesome": "latest",
         "primer-css": "latest",
         "angular-dropdowns": "latest",
-        "headroom.js": "latest"
+        "headroom.js": "latest",
+        "modernizr": "latest"
     }
 }
