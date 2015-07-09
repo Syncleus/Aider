@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ui.router', 'ngDropdowns', 'headroom']);
+var app = angular.module('myApp', ['ui.router', 'ngDropdowns', 'headroom', 'nvd3ChartDirectives']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider

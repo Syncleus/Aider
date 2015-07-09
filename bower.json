@@ -1,14 +1,18 @@
 {
-    "name" : "AIDE",
-    "version": "1.0.0",
-    "dependencies": {
-        "angular": "latest",
-        "normalize.css": "latest",
-        "font-awesome": "latest",
-        "primer-css": "latest",
-        "angular-dropdowns": "latest",
-        "headroom.js": "latest",
-        "modernizr": "latest",
-        "angular-ui-router": "latest"
-    }
+  "name": "AIDE",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "latest",
+    "normalize.css": "latest",
+    "font-awesome": "latest",
+    "primer-css": "latest",
+    "angular-dropdowns": "latest",
+    "headroom.js": "latest",
+    "modernizr": "latest",
+    "angular-ui-router": "latest",
+    "angularjs-nvd3-directives": "latest"
+  },
+  "resolutions": {
+    "d3": "~3.4.1"
+  }
 }
