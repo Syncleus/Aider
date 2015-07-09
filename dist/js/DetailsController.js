@@ -1,3 +1,3 @@
-app.controller('DetailsController', ['$scope', '$routeParams', function($scope, $routeParams) {
-    $scope.name = $routeParams.name;
+app.controller('DetailsController', ['$scope', '$stateParams', function($scope, $stateParams) {
+    $scope.name = $stateParams.name;
 }]);

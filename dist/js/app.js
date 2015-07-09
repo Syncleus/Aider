@@ -1,16 +1,16 @@
-var app = angular.module('myApp', ['ngRoute', 'ngDropdowns', 'headroom']);
+var app = angular.module('myApp', ['ui.router', 'ngDropdowns', 'headroom']);
 
-app.config(function ($routeProvider) {
-    $routeProvider
-        .when('/', {
+app.config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+        .state('/', {
+            url: '/',
             controller: 'HomeController',
             templateUrl: 'views/homeView.html'
         })
-        .when('/details/:name', {
+        .state('/details/:name', {
+            url: '/details/:name',
             controller: 'DetailsController',
             templateUrl: 'views/detailsView.html'
-        })
-        .otherwise({
-            redirectTo: '/'
         });
+    $urlRouterProvider.otherwise('/');
 });

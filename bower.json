@@ -3,12 +3,12 @@
     "version": "1.0.0",
     "dependencies": {
         "angular": "latest",
-        "angular-route": "latest",
         "normalize.css": "latest",
         "font-awesome": "latest",
         "primer-css": "latest",
         "angular-dropdowns": "latest",
         "headroom.js": "latest",
-        "modernizr": "latest"
+        "modernizr": "latest",
+        "angular-ui-router": "latest"
     }
 }
