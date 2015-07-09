@@ -34,15 +34,19 @@
     <div class="container">
         <div class="columns">
             <div class="leftHeader column">
-                <img src="img/logo-huge.png" style="width: 16px; height: 16px;"/>
+                <img src="img/logo-huge.png" class="header-logo"/><span class="header-title">AIDE</span>
             </div>
-            <div class="rightHeader column">
-                .one-fifth
+            <div class="rightHeader column" style="text-align: right;">
+                <span class="fa fa-envelope inbox unread"></span>&nbsp;
+                <span class="octicon octicon-file-media" style="padding-right: 1px;"></span><span class="dropdown-caret"></span>
             </div>
         </div>
     </div>
 </header>
-<div class="content" ng-view></div>
+
+<div class="container">
+    <div class="content" ng-view></div>
+</div>
 
 <script src="js/app.js"></script>
 <script src="js/HomeController.js"></script>
