@@ -29,21 +29,23 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div  ng-controller="HeaderController">
-<header headroom class="header" tolerance="5" offset="205"
-        classes='{"initial":"animatedHeader","pinned":"slideDown","unpinned":"slideUp","top":"headroom--top","notTop":"headroom--not-top"}'>
-    <div class="container">
-        <div class="columns">
-            <div class="leftHeader column">
-                <img src="img/logo-huge.png" class="header-logo"/><span class="header-title">AIDE</span>
-            </div>
-            <div class="rightHeader column" style="text-align: right;">
-                <span class="fa fa-envelope inbox" ng-class='{unread: unreadNotifications}'></span>&nbsp;
-                <span class="octicon octicon-file-media" style="padding-right: 1px;"></span><span class="dropdown-caret"></span>
+<div ng-controller="HeaderController">
+    <header headroom class="header" tolerance="5" offset="205"
+            classes='{"initial":"animatedHeader","pinned":"slideDown","unpinned":"slideUp","top":"headroom--top","notTop":"headroom--not-top"}'>
+        <div class="container">
+            <div class="columns">
+                <div class="leftHeader column">
+                    <img src="img/logo-huge.png" class="header-logo"/><span class="header-title">AIDE</span>
+                </div>
+                <div class="rightHeader column" style="text-align: right;">
+                    <span class="fa fa-envelope inbox" ng-class='{unread: unreadNotifications}'></span>&nbsp;
+                    <span dropdown-menu="ddSelectOptions" dropdown-model="ddSelectSelected" dropdown-item-label="text">
+                        <span class="octicon octicon-file-media" style="padding-right: 1px;"></span><span class="dropdown-caret"></span>
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
     <br/>
     <br/>
     <input type="checkbox" ng-model="unreadNotifications">Flip Notifications</input>

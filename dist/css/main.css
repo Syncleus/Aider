@@ -1,20 +1,3 @@
-.wrap-dd-menu .dropdown {
-    top: 100%;
-}
-
-.wrap-dd-menu {
-    width: 100%;
-    text-align: center;
-}
-
-.wrap-dd-menu .dropdown:before {
-    right: 50%;
-}
-
-.wrap-dd-menu .dropdown:after {
-    right: calc(50% + 2px);
-}
-
 .content {
     margin-top: 40px;
 }
@@ -34,18 +17,6 @@
     width: 20%;
 }
 
-.dropdown-caret {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    content: "";
-    vertical-align: -2px;
-    border: 4px solid;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-}
-
 .header-logo {
     width: 16px;
     height: 16px;
@@ -61,4 +32,53 @@
 
 .inbox.unread {
     color: #f00000;
+}
+
+.dropdown-caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    content: "";
+    vertical-align: -2px;
+    border: 4px solid;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.wrap-dd-menu .dropdown {
+    top: 100%;
+}
+
+.wrap-dd-menu {
+    width: 100%;
+    text-align: center;
+    display: inline;
+}
+
+.wrap-dd-menu .dropdown:before {
+    right: 50%;
+}
+
+.wrap-dd-menu .dropdown:after {
+    right: calc(50% + 2px);
+}
+
+.rightHeader .wrap-dd-menu {
+    text-align: left;
+}
+
+.rightHeader .wrap-dd-menu .dropdown {
+    width: 200px;
+    left: -65px;
+}
+
+.wrap-dd-menu .dropdown li a {
+    border-bottom: none;
+    padding: 5px;
+}
+
+.wrap-dd-menu .dropdown li.divider {
+    padding-top: 1px;
+    padding-bottom: 0;
 }
