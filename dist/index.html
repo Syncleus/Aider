@@ -29,6 +29,7 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
+<div  ng-controller="HeaderController">
 <header headroom class="header" tolerance="5" offset="205"
         classes='{"initial":"animatedHeader","pinned":"slideDown","unpinned":"slideUp","top":"headroom--top","notTop":"headroom--not-top"}'>
     <div class="container">
@@ -37,18 +38,23 @@
                 <img src="img/logo-huge.png" class="header-logo"/><span class="header-title">AIDE</span>
             </div>
             <div class="rightHeader column" style="text-align: right;">
-                <span class="fa fa-envelope inbox unread"></span>&nbsp;
+                <span class="fa fa-envelope inbox" ng-class='{unread: unreadNotifications}'></span>&nbsp;
                 <span class="octicon octicon-file-media" style="padding-right: 1px;"></span><span class="dropdown-caret"></span>
             </div>
         </div>
     </div>
 </header>
+    <br/>
+    <br/>
+    <input type="checkbox" ng-model="unreadNotifications">Flip Notifications</input>
+</div>
 
-<div class="container">
-    <div class="content" ui-view></div>
+<div class="content">
+    <div class="container" ui-view></div>
 </div>
 
 <script src="js/app.js"></script>
+<script src="js/HeaderController.js"></script>
 <script src="js/HomeController.js"></script>
 <script src="js/DetailsController.js"></script>
 </body>
