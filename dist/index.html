@@ -1,77 +1,81 @@
 <!doctype html>
 <html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-    <meta name="description" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
 
-    <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css">
 
-    <!-- angular -->
-    <script src="js/vendor/angular.min.js"></script>
-    <script src="js/vendor/angular-ui-router.js"></script>
-    <script src="js/vendor/angular-dropdowns.min.js"></script>
-    <script src="js/vendor/headroom.min.js"></script>
-    <script src="js/vendor/angular.headroom.min.js"></script>
-    <script src="js/vendor/modernizr.js"></script>
-    <script src="js/vendor/d3.min.js"></script>
-    <script src="js/vendor/nv.d3.min.js"></script>
-    <script src="js/vendor/angularjs-nvd3-directives.min.js"></script>
-</head>
-<body ng-app="myApp">
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/angular-ui-router.js"></script>
+        <script src="js/vendor/angular-dropdowns.min.js"></script>
+        <script src="js/vendor/headroom.min.js"></script>
+        <script src="js/vendor/angular.headroom.min.js"></script>
+        <script src="js/vendor/modernizr.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script src="js/vendor/nv.d3.min.js"></script>
+        <script src="js/vendor/angularjs-nvd3-directives.min.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">
+            You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgradeyour
+            browser</a> to improve your experience.
+        </p>
+        <![endif]-->
 
-<div ng-controller="headerController">
-    <header headroom class="header" tolerance="5" offset="205"
-            classes='{"initial":"animatedHeader","pinned":"slideDown","unpinned":"slideUp","top":"headroom--top","notTop":"headroom--not-top"}'>
-        <div class="container">
-            <div class="columns">
-                <div class="left-header column">
-                    <a ui-sref="home"><img src="img/logo.png" class="header-logo"/><span class="header-title">AIDE</span></a>
+        <div ng-controller="headerController">
+            <header headroom
+                    class="header"
+                    tolerance="5"
+                    offset="205"
+                    classes='{"initial":"animatedHeader","pinned":"slideDown","unpinned":"slideUp","top":"headroom--top","notTop":"headroom--not-top"}'>
+                <div class="header-container">
+                    <div class="header-content">
+                        <div class="header-identity">
+                            <a ui-sref="home"><img src="img/logo.png" class="header-logo"/><span class="header-title">AIDE</span></a>
+                        </div>
+                        <div class="header-navigate">
+                            <span class="inbox" ng-class='{unread: user.unreadNotifications}'></span>&nbsp;
+                            <span dropdown-menu="ddSelectOptions" dropdown-model="ddSelectSelected" dropdown-item-label="text">
+                                <span class="no-avatar" style="padding-right: 1px;"></span><span class="dropdown-caret"></span>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <div class="right-header column" style="text-align: right;">
-                    <span class="fa fa-envelope inbox fa-2x" ng-class='{unread: user.unreadNotifications}'></span>&nbsp;
-                    <span dropdown-menu="ddSelectOptions" dropdown-model="ddSelectSelected" dropdown-item-label="text">
-                        <span class="mega-octicon octicon-file-media" style="padding-right: 1px;"></span><span class="dropdown-caret"></span>
-                    </span>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main-content">
+                <div ui-view></div>
+            </div>
+
+            <footer>
+                <hr/>
+                <div class="footer-content">
+                    <div class="footer-legal">
+                        &copy;2015 Syncleus, Inc. <a href="#">Terms</a> <a href="#">Privacy</a> <a href="#">Security</a> <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-brand">
+                        <a ui-sref="home"><img src="img/logo-light.png" class="footer-logo"/></a>
+                    </div>
+                    <div class="footer-help">
+                        <a href="#">Status</a> <a href="#">API</a> <a href="#">Training</a> <a href="#">Shop</a> <a href="#">Blog</a> <a href="#">About</a> <a href="#">Help</a>
+                    </div>
                 </div>
-            </div>
+            </footer>
         </div>
-    </header>
-</div>
 
-<div class="container">
-    <div class="content">
-        <div ui-view></div>
-    </div>
-
-    <footer>
-        <hr/>
-        <div class="columns">
-            <div class="column left-footer">
-                &copy;2015 Syncleus, Inc. <a href="#">Terms</a> <a href="#">Privacy</a><a href="#">Security</a><a href="#">Contact</a>
-            </div>
-            <div class="column middle-footer">
-                <a ui-sref="home"><img src="img/logo-light.png" class="footer-logo"/></a>
-            </div>
-            <div class="column right-footer">
-                <a href="#">Status</a> <a href="#">API</a> <a href="#">Training</a> <a href="#">Shop</a> <a href="#">Blog</a> <a href="#">About</a> <a href="#">Help</a>
-            </div>
-        </div>
-    </footer>
-</div>
-
-<script src="js/app.js"></script>
-<script src="js/userService.js"></script>
-<script src="js/headerController.js"></script>
-<script src="js/homeController.js"></script>
-<script src="js/uppercaseController.js"></script>
-<script src="js/chartsController.js"></script>
-<script src="js/userToggleController.js"></script>
-<script src="js/datasetController.js"></script>
-</body>
+        <script src="js/app.js"></script>
+        <script src="js/userService.js"></script>
+        <script src="js/headerController.js"></script>
+        <script src="js/homeController.js"></script>
+        <script src="js/uppercaseController.js"></script>
+        <script src="js/chartsController.js"></script>
+        <script src="js/userToggleController.js"></script>
+        <script src="js/datasetController.js"></script>
+    </body>
 </html>
