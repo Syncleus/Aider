@@ -30,6 +30,11 @@
     font-family: serif;
 }
 
+.left-header a {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
 footer {
     font-size: smaller;
 }
