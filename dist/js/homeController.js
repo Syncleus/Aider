@@ -1,4 +1,4 @@
-app.controller('homeController', ['$scope', 'user', function ($scope, user) {
+app.controller('homeController', ['$scope', function ($scope) {
     $scope.people = [
         {
             text: 'Jeffrey',
