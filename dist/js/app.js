@@ -7,6 +7,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'HomeController',
             templateUrl: 'views/homeView.html'
         })
+        .state('charts', {
+            url: '/charts',
+            controller: 'ChartsController',
+            templateUrl: 'views/chartsView.html'
+        })
         .state('details', {
             url: '/details/:name',
             controller: 'DetailsController',

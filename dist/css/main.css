@@ -99,11 +99,11 @@ footer {
     right: calc(50% + 2px);
 }
 
-.rightHeader .wrap-dd-menu {
+.right-header .wrap-dd-menu {
     text-align: left;
 }
 
-.rightHeader .wrap-dd-menu .dropdown {
+.right-header .wrap-dd-menu .dropdown {
     width: 200px;
     left: -65px;
 }
