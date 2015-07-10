@@ -4,12 +4,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/',
-            controller: 'HomeController',
+            controller: 'homeController',
             templateUrl: 'views/homeView.html'
         })
         .state('charts', {
             url: '/charts',
-            controller: 'ChartsController',
+            controller: 'chartsController',
             templateUrl: 'views/chartsView.html'
         })
         .state('userToggle', {
@@ -23,7 +23,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('details', {
             url: '/details/:name',
-            controller: 'DetailsController',
+            controller: 'detailsController',
             templateUrl: 'views/detailsView.html'
         });
     $urlRouterProvider.otherwise('/');
