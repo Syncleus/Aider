@@ -1,4 +1,6 @@
-app.controller('HomeController', ['$scope', function ($scope) {
+app.controller('HomeController', ['$scope', 'user', function ($scope, user) {
+
+    $scope.user = user;
 
     // By default the 'text' property will be used as the display text in the dropdown entry.
     // All options that are not dividers must have a 'text' property.

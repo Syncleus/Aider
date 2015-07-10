@@ -1,4 +1,6 @@
-app.controller('HeaderController', ['$scope', function($scope) {
+app.controller('HeaderController', ['$scope', 'user', function($scope, user) {
+    $scope.user = user;
+
     $scope.unreadNotifications = false;
 
     $scope.ddSelectOptions = [
