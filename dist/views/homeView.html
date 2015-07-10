@@ -1,14 +1,6 @@
-<div class="columns">
-    <div class="column" style="width: 90%;">
-        &nbsp;
-    </div>
-    <div class="column" style="width: 10%;">
-            <span dropdown-menu="ddSelectOptions" dropdown-model="ddSelectSelected" dropdown-item-label="text">
-                People <span class="octicon octicon-chevron-down"></span>
-            </span>
-    </div>
+<div ng-repeat="person in people">
+    <a ng-href="{{person.href}}">{{person.text}}</a><br/>
 </div>
-
 <a ui-sref="charts">Demo nv d3</a><br/>
 <a ui-sref="lorem">Just a bunch of text</a><br/>
 <a ui-sref="userToggle">Toggle User States</a><br/>
