@@ -12,6 +12,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'ChartsController',
             templateUrl: 'views/chartsView.html'
         })
+        .state('userToggle', {
+            url: '/userToggle',
+            controller: 'userToggleController',
+            templateUrl: 'views/userToggleView.html'
+        })
         .state('lorem', {
             url: '/lorem',
             templateUrl: 'views/loremView.html'
