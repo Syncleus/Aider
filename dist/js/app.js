@@ -22,9 +22,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/loremView.html'
         })
         .state('details', {
-            url: '/details/:name',
-            controller: 'detailsController',
-            templateUrl: 'views/detailsView.html'
+            url: '/uppercase/:name',
+            controller: 'uppercaseController',
+            templateUrl: 'views/uppercaseView.html'
         });
     $urlRouterProvider.otherwise('/');
 });
