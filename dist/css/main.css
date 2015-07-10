@@ -9,11 +9,11 @@
     padding-bottom: 5px;
 }
 
-.leftHeader {
+.left-header {
     width: 80%;
 }
 
-.rightHeader {
+.right-header {
     width: 20%;
 }
 
@@ -24,10 +24,41 @@
     position: relative;
 }
 
+.footer-logo {
+    width: 16px;
+    height: 16px;
+}
+
 .header-title {
     font-weight: bold;
     padding-left: 0.4em;
     font-family: serif;
+}
+
+.middle-footer {
+    text-align: center;
+    display: inline;
+    width: 20%;
+}
+
+.left-footer {
+    width: 40%;
+    text-align: left;
+    display: inline;
+}
+
+.left-footer a {
+    padding-left: 10px;
+}
+
+.right-footer {
+    width: 40%;
+    text-align: right;
+    display: inline;
+}
+
+.right-footer a {
+    padding-right: 10px;
 }
 
 .inbox.unread {

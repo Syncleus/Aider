@@ -38,10 +38,10 @@
             classes='{"initial":"animatedHeader","pinned":"slideDown","unpinned":"slideUp","top":"headroom--top","notTop":"headroom--not-top"}'>
         <div class="container">
             <div class="columns">
-                <div class="leftHeader column">
+                <div class="left-header column">
                     <img src="img/logo-huge.png" class="header-logo"/><span class="header-title">AIDE</span>
                 </div>
-                <div class="rightHeader column" style="text-align: right;">
+                <div class="right-header column" style="text-align: right;">
                     <span class="fa fa-envelope inbox" ng-class='{unread: user.unreadNotifications}'></span>&nbsp;
                     <span dropdown-menu="ddSelectOptions" dropdown-model="ddSelectSelected" dropdown-item-label="text">
                         <span class="octicon octicon-file-media" style="padding-right: 1px;"></span><span class="dropdown-caret"></span>
@@ -52,8 +52,25 @@
     </header>
 </div>
 
-<div class="content">
-    <div class="container" ui-view></div>
+<div class="container">
+    <div class="content">
+        <div ui-view></div>
+    </div>
+
+    <footer>
+        <hr/>
+        <div class="columns">
+            <div class="column left-footer">
+                &copy; Syncleus, Inc. <a href="#">Terms</a> <a href="#">Privacy</a><a href="#">Security</a><a href="#">Contact</a>
+            </div>
+            <div class="column middle-footer">
+                <img src="img/logo-light.svg" class="footer-logo"/>
+            </div>
+            <div class="column right-footer">
+                <a href="#">Status</a> <a href="#">API</a> <a href="#">Training</a> <a href="#">Shop</a> <a href="#">Blog</a> <a href="#">About</a> <a href="#">Help</a>
+            </div>
+        </div>
+    </footer>
 </div>
 
 <script src="js/app.js"></script>
