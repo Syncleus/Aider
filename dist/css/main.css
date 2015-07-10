@@ -39,6 +39,11 @@ footer {
     font-size: smaller;
 }
 
+footer div {
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
 .footer-logo {
     width: 16px;
     height: 16px;
