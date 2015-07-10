@@ -24,15 +24,19 @@
     position: relative;
 }
 
-.footer-logo {
-    width: 16px;
-    height: 16px;
-}
-
 .header-title {
     font-weight: bold;
     padding-left: 0.4em;
     font-family: serif;
+}
+
+footer {
+    font-size: smaller;
+}
+
+.footer-logo {
+    width: 16px;
+    height: 16px;
 }
 
 .middle-footer {
