@@ -1,4 +1,6 @@
+bower_components/
 node_modules/
-dist/deps/
+dist/fonts/
+dist/js/vendor/
 dist/css/
 .idea
