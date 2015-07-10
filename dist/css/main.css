@@ -39,6 +39,10 @@ footer {
     font-size: smaller;
 }
 
+footer hr {
+    margin-top: 50px;
+}
+
 footer div {
     padding-top: 5px;
     padding-bottom: 20px;
