@@ -21,9 +21,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: '/lorem',
             templateUrl: 'views/loremView.html'
         })
-        .state('dataset', {
-            url: '/dataset',
-            templateUrl: 'views/datasetView.html'
+        .state('dataModel', {
+            url: '/dataModel',
+            templateUrl: 'views/dataModelView.html'
         })
         .state('details', {
             url: '/uppercase/:name',
