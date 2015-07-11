@@ -32,7 +32,20 @@
                     <td>{{datapoint.description}}</td>
                 </tr>
                 <tr class="data-model-table-details-row" ng-repeat-end>
-                    <td colspan="3">This is just a test</td>
+                    <td colspan="3">
+                        <table>
+                            <tbody>
+                                <tr class="data-model-details-text">
+                                    <td>Description:</td>
+                                    <td>{{datapoint.description}}</td>
+                                </tr>
+                                <tr class="data-model-details-text">
+                                    <td>Type:</td>
+                                    <td>{{datapoint.type}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
                 </tr>
             </tbody>
         </table>

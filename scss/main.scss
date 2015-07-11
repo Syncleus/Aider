@@ -389,3 +389,18 @@ footer div {
     padding-bottom: 10px;
     background-color: #ffffff;
 }
+
+.data-model-details-text td:first-child {
+    text-align: right;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.data-model-details-text td:last-child {
+    text-align: left;
+    border: none;
+    padding: 0;
+}
