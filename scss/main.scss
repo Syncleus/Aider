@@ -7,6 +7,11 @@
 @import 'crossbrowser';
 @import "headroom-animate";
 
+a {
+    cursor: pointer;
+    cursor: hand;
+}
+
 .header {
     background-color: #f5f5f5;
     border-bottom: 1px solid #e5e5e5;
@@ -420,4 +425,16 @@ footer div {
 
 .data-model-table-key-row.selected td:last-child {
     display: none;
+}
+
+.expand-collapse-links {
+    margin-bottom: 5px;
+}
+
+.expand-collapse-links a {
+    margin-left: 10px;
+}
+
+.expand-collapse-links a:first-child {
+    margin-left: 0;
 }

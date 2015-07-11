@@ -89,4 +89,16 @@ app.controller('dataModelController', ['$scope', function ($scope) {
     $scope.selectDataModelKey = function(index) {
         $scope.datapoints[index].detailsVisible = !($scope.datapoints[index].detailsVisible);
     };
+
+    $scope.selectAllDataModelKeys = function() {
+        for( x in $scope.datapoints) {
+            $scope.datapoints[x].detailsVisible = true;
+        }
+    };
+
+    $scope.unselectAllDataModelKeys = function() {
+        for( x in $scope.datapoints) {
+            $scope.datapoints[x].detailsVisible = false;
+        }
+    };
 }]);

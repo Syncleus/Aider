@@ -24,6 +24,7 @@
 
 <div class="analyzer-container">
     <div class="analyzer-content">
+        <div class="expand-collapse-links"><a ng-click="selectAllDataModelKeys()">Expand all</a> <a ng-click="unselectAllDataModelKeys()">Collapse all</a></div>
         <table class="data-model-table">
             <tbody>
                 <tr class="data-model-table-key-row"  ng-class='{selected: datapoint.detailsVisible}' ng-click="selectDataModelKey($index)" ng-repeat-start="datapoint in datapoints">
