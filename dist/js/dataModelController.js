@@ -8,14 +8,14 @@ app.controller('dataModelController', ['$scope', function ($scope) {
             "states": ["none", "High School", "Associates", "Bachlors", "Masters", "PhD"]
         },
         {
-            "key": "personalIncomeLevel",
+            "key": "personalIncome",
             "description": "Individual's average income per year",
             "detailsVisible" : false,
             "type": "number",
             "rangeMin": 0,
         },
         {
-            "key": "householdIncomeLevel",
+            "key": "householdIncome",
             "description": "Household's average income per year",
             "detailsVisible" : false,
             "type": "number",
