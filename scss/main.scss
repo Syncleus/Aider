@@ -404,3 +404,20 @@ footer div {
     border: none;
     padding: 0;
 }
+
+.data-model-table-details-row {
+    display: none;
+}
+
+.data-model-table-details-row.selected {
+    display: table-row;
+}
+
+.data-model-table-key-row.selected .data-model-table-expand-icon {
+    @extend .octicon;
+    @extend .octicon-triangle-down;
+}
+
+.data-model-table-key-row.selected td:last-child {
+    display: none;
+}

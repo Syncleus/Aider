@@ -73,4 +73,8 @@ app.controller('dataModelController', ['$scope', function ($scope) {
             "type": "discrete"
         }
     ];
+
+    $scope.selectDataModelKey = function(index) {
+        $scope.datapoints[index].detailsVisible = !($scope.datapoints[index].detailsVisible);
+    };
 }]);

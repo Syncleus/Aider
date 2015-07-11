@@ -26,12 +26,12 @@
     <div class="analyzer-content">
         <table class="data-model-table">
             <tbody>
-                <tr class="data-model-table-key-row" ng-repeat-start="datapoint in datapoints">
+                <tr class="data-model-table-key-row"  ng-class='{selected: datapoint.detailsVisible}' ng-click="selectDataModelKey($index)" ng-repeat-start="datapoint in datapoints">
                     <td><span class="data-model-table-expand-icon"></span></td>
                     <td>{{datapoint.key}}</td>
                     <td>{{datapoint.description}}</td>
                 </tr>
-                <tr class="data-model-table-details-row" ng-repeat-end>
+                <tr class="data-model-table-details-row"  ng-class='{selected: datapoint.detailsVisible}' ng-repeat-end>
                     <td colspan="3">
                         <table>
                             <tbody>
