@@ -23,6 +23,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('dataModel', {
             url: '/dataModel',
+            controller: 'dataModelController',
             templateUrl: 'views/dataModelView.html'
         })
         .state('details', {
