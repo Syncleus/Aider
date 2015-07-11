@@ -308,3 +308,12 @@ footer div {
     @extend .fa-stack-1x;
     @extend .fa-inverse
 }
+
+.analyzer-title-text {
+    padding-top: 7px;
+    display: inline-block;
+}
+
+.analyzer-title-text h2 {
+    margin: 0;
+}
