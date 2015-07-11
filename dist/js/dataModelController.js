@@ -1,37 +1,52 @@
 app.controller('dataModelController', ['$scope', function ($scope) {
     $scope.datapoints = [
         {
-            "key": "educationMax"
+            "key": "educationMax",
+            "description": "Highest level of education completed"
         },
         {
-            "key": "incomeLevel"
+            "key": "personalIncomeLevel",
+            "description": "Individual's average income per year"
         },
         {
-            "key": "race"
+            "key": "householdIncomeLevel",
+            "description": "Household average income per year"
         },
         {
-            "key": "sex"
+            "key": "race",
+            "description" : "The race the individual identifies with"
         },
         {
-            "key": "politicalParty"
+            "key": "sex",
+            "description" : "Self-identified sex of the individual"
         },
         {
-            "key": "age"
+            "key": "politicalParty",
+            "description": "Registered political party affiliation"
         },
         {
-            "key": "profession"
+            "key": "birthYear",
+            "description": "The year the individual was born"
         },
         {
-            "key": "countryOfResidency"
+            "key": "profession",
+            "description": "Primary field of employment"
         },
         {
-            "key": "childrenCount"
+            "key": "countryOfResidency",
+            "description": "Country the individual spends most of their time per year"
         },
         {
-            "key": "maritalStatus"
+            "key": "childrenCount",
+            "description": "Number of children the individual has as a dependency"
         },
         {
-            "key": "citizenship"
+            "key": "maritalStatus",
+            "description": "The individuals current relationship status"
+        },
+        {
+            "key": "citizenship",
+            "description": "Indicates the individuals citizenship status"
         }
     ];
 }]);
