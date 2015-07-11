@@ -312,7 +312,7 @@ footer div {
 }
 
 .analyzer-title-text {
-    padding-top: 7px;
+    padding-top: 5px;
     display: inline-block;
 }
 
@@ -380,4 +380,12 @@ footer div {
 .data-model-table-expand-icon {
     @extend .octicon;
     @extend .octicon-triangle-right;
+}
+
+.data-model-table-details-row td {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
 }
