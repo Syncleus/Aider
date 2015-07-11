@@ -7,14 +7,22 @@
 @import 'crossbrowser';
 @import "headroom-animate";
 
+$primary-background-color: #ffffff;
+$muted-background-color: #f5f5f5;
+$primary-border-color: #d0d0d0;
+$muted-border-color: #e0e0e0;
+$primary-foreground-color: #000000;
+$muted-foreground-color: #bbbbbb;
+$important-alert-color: #f00000;
+
 a {
     cursor: pointer;
     cursor: hand;
 }
 
 .header {
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #e5e5e5;
+    background-color: $muted-background-color;
+    border-bottom: 1px solid $muted-border-color;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -117,7 +125,7 @@ footer div {
     @extend .fa-2x;
 }
 .inbox.unread {
-    color: #f00000;
+    color: $important-alert-color;
 }
 
 .dropdown-caret {
@@ -178,7 +186,7 @@ footer div {
 }
 
 .data-model-table {
-    border: 1px solid #d0d0d0;
+    border: 1px solid $primary-border-color;
     border-radius: 5px;
     border-collapse: separate;
     width: 100%;
@@ -186,8 +194,8 @@ footer div {
 }
 
 .data-model-table tbody tr td {
-    border-bottom: 1px solid #e0e0e0;
-    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid $muted-border-color;
+    border-top: 1px solid $muted-border-color;
 }
 
 .data-model-table tbody tr:first-child td {
@@ -239,7 +247,7 @@ footer div {
 .analyzer-nav-item.selected a {
     font-weight: bold;
     color: #333;
-    background-color: #fff;
+    background-color: $primary-background-color;
     border-color: #eee #eee #eee transparent;
     border-radius: 0 3px 3px 0;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
@@ -306,7 +314,7 @@ footer div {
 }
 
 .analyzer-title .analyzer-icon .analyzer-icon-bottom {
-    color: #bbbbbb;
+    color: $muted-foreground-color;
 }
 
 .analyzer-icon-top {
