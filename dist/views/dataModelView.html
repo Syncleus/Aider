@@ -43,6 +43,14 @@
                                     <td>Type:</td>
                                     <td>{{datapoint.type}}</td>
                                 </tr>
+                                <tr class="data-model-details-text" ng-if="datapoint.states != null">
+                                    <td>States:</td>
+                                    <td>{{datapoint.states}}</td>
+                                </tr>
+                                <tr class="data-model-details-text" ng-if="datapoint.type == 'number'">
+                                    <td>Range:</td>
+                                    <td><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
+                                </tr>
                             </tbody>
                         </table>
                     </td>
