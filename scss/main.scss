@@ -194,6 +194,8 @@ footer div {
 }
 
 .analyzer-nav {
+    @extend .column;
+    width: 20%;
     position: relative;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -316,4 +318,66 @@ footer div {
 
 .analyzer-title-text h2 {
     margin: 0;
+}
+
+.analyzer-container {
+    @extend .columns;
+}
+
+.analyzer-content {
+    @extend .column;
+    width: 80%;
+}
+
+.analyzer-data-model-icon {
+    @extend .octicon;
+    @extend .octicon-code;
+}
+
+.analyzer-datastore-icon {
+    @extend .octicon;
+    @extend .octicon-database;
+}
+
+.analyzer-fitness-icon {
+    @extend .octicon;
+    @extend .octicon-flame;
+}
+
+.analyzer-endpoints-icon {
+    @extend .octicon;
+    @extend .octicon-radio-tower;
+}
+
+.analyzer-insights-icon {
+    @extend .octicon;
+    @extend .octicon-eye;
+}
+
+.analyzer-traffic-icon {
+    @extend .octicon;
+    @extend .octicon-pulse;
+}
+
+.analyzer-statistics-icon {
+    @extend .octicon;
+    @extend .octicon-graph;
+}
+
+.analyzer-configure-icon {
+    @extend .octicon;
+    @extend .octicon-tools;
+}
+
+.data-model-table-key-row td:first-child {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    width: 16px;
+}
+
+.data-model-table-expand-icon {
+    @extend .octicon;
+    @extend .octicon-triangle-right;
 }

@@ -22,43 +22,43 @@
 
 <hr/>
 
-<div class="columns">
-    <div class="column four-fifths">
+<div class="analyzer-container">
+    <div class="analyzer-content">
         <table class="data-model-table">
             <tbody>
-                <tr ng-repeat="datapoint in datapoints">
-                    <td style="padding-left: 10px; padding-top: 10px; padding-bottom: 10px; padding-right: 10px; width: 16px;"><span class="octicon octicon-triangle-right"></span></td>
+                <tr class="data-model-table-key-row" ng-repeat="datapoint in datapoints">
+                    <td><span class="data-model-table-expand-icon"></span></td>
                     <td>{{datapoint.key}}</td>
                     <td>{{datapoint.description}}</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="column one-fifth">
-        <nav class="analyzer-nav" role="navigation">
+    <div class="analyzer-nav">
+        <nav role="navigation">
             <ul class="analyzer-nav-group">
                 <li class="analyzer-nav-item selected">
                     <a href="#">
-                        <span class="octicon octicon-code"></span> Data model
+                        <span class="analyzer-data-model-icon"></span> Data model
                     </a>
                 </li>
 
                 <li class="analyzer-nav-item">
                     <a href="#">
-                        <span class="octicon octicon-database"></span> Datastore
+                        <span class="analyzer-datastore-icon"></span> Datastore
                     </a>
                 </li>
 
                 <li class="analyzer-nav-item">
                     <a href="#">
-                        <span class="octicon octicon-flame"></span> Fitness
+                        <span class="analyzer-fitness-icon"></span> Fitness
                         <span class="counter">0</span>
                     </a>
                 </li>
 
                 <li class="analyzer-nav-item">
                     <a href="#">
-                        <span class="octicon octicon-radio-tower"></span> Endpoints
+                        <span class="analyzer-endpoints-icon"></span> Endpoints
                     </a>
                 </li>
             </ul>
@@ -68,20 +68,20 @@
             <ul class="analyzer-nav-group">
                 <li class="analyzer-nav-item">
                     <a href="#">
-                        <span class="octicon octicon-eye"></span> Insights
+                        <span class="analyzer-insights-icon"></span> Insights
                         <span class="counter">0</span>
                     </a>
                 </li>
 
                 <li class="analyzer-nav-item">
                     <a href="#">
-                        <span class="octicon octicon-pulse"></span> Traffic
+                        <span class="analyzer-traffic-icon"></span> Traffic
                     </a>
                 </li>
 
                 <li class="analyzer-nav-item">
                     <a href="#">
-                        <span class="octicon octicon-graph"></span> Statistics
+                        <span class="analyzer-statistics-icon"></span> Statistics
                     </a>
                 </li>
             </ul>
@@ -91,7 +91,7 @@
             <ul class="analyzer-nav-group">
                 <li class="analyzer-nav-item">
                     <a href="#">
-                        <span class="octicon octicon-tools"></span> Configure
+                        <span class="analyzer-configure-icon"></span> Configure
                     </a>
                 </li>
             </ul>
