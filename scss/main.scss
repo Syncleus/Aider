@@ -82,7 +82,7 @@ footer div {
     width: 40%;
     text-align: left;
     display: inline;
-    padding-top: 17px;
+    margin-top: 17px;
     @extend .column;
 }
 
@@ -94,7 +94,7 @@ footer div {
     width: 40%;
     text-align: right;
     display: inline;
-    padding-top: 17px;
+    margin-top: 17px;
     @extend .column;
 }
 
@@ -185,4 +185,47 @@ footer div {
 
 .dataset-table tbody tr:last-child {
     border-bottom: none;
+}
+
+.sunken-menu {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-image: -webkit-linear-gradient(left, #f6f6f6 0%, #fff 8px);
+    background-image: linear-gradient(to right, #f6f6f6 0%, #fff 8px);
+    box-shadow: inset 1px 0 0 #eee;
+}
+
+.sunken-menu-group {
+    list-style-type: none;
+}
+
+.tooltipped {
+    position: relative;
+}
+
+.sunken-menu-item.selected {
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border-color: #eee #eee #eee transparent;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+}
+
+.sunken-menu-item {
+    display: block;
+    padding: 8px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    outline: 0;
+}
+
+.sunken-menu-separator {
+    position: relative;
+    height: 5px;
+    margin: 8px 0 6px 1px;
+    background-image: -webkit-radial-gradient(farthest-side at left top, #f4f4f4, rgba(244,244,244,0));
+    background-image: radial-gradient(farthest-side at left top, #f4f4f4, rgba(244,244,244,0));
 }
