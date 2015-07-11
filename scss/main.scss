@@ -172,7 +172,7 @@ footer div {
     margin-top: 80px;
 }
 
-.dataset-table {
+.data-model-table {
     border: 1px solid #d0d0d0;
     border-radius: 5px;
     border-collapse: separate;
@@ -180,16 +180,16 @@ footer div {
     background-color: rgb(248, 248, 248);
 }
 
-.dataset-table tbody tr td {
+.data-model-table tbody tr td {
     border-bottom: 1px solid #e0e0e0;
     border-top: 1px solid #e0e0e0;
 }
 
-.dataset-table tbody tr:first-child td {
+.data-model-table tbody tr:first-child td {
     border-top: none;
 }
 
-.dataset-table tbody tr:last-child td {
+.data-model-table tbody tr:last-child td {
     border-bottom: none;
 }
 
