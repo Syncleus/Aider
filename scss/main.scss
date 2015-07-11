@@ -248,3 +248,63 @@ footer div {
     background-color: #d26911;
     border-radius: 0 3px 3px 0;
 }
+
+.analyzer-header {
+    @extend .columns;
+}
+
+.analyzer-title {
+    @extend .column;
+    width: 80%;
+    padding: 0;
+}
+
+.analyzer-buttons {
+    @extend .column;
+    width: 20%;
+}
+
+.star-button {
+    @extend .clearfix;
+    display: inline;
+    float: right;
+}
+
+.star-button-content {
+    @extend .btn;
+    @extend .btn-sm;
+    @extend .btn-with-count;
+}
+
+.star-button-icon {
+    @extend .octicon;
+    @extend .o.cticon-star;
+}
+
+.star-button-count {
+    @extend .social-count;
+}
+
+.analyzer-icon {
+    @extend .fa-stack;
+    @extend .fa-lg;
+    display: inline;
+    padding-left: 58px;
+}
+
+.analyzer-icon-bottom {
+    @extend .fa;
+    @extend .fa-cloud;
+    @extend .fa-stack-2x;
+}
+
+.analyzer-title .analyzer-icon .analyzer-icon-bottom {
+    color: #bbbbbb;
+}
+
+.analyzer-icon-top {
+    @extend .fa;
+    @extend .fa-dashboard;
+    @extend .fa-stack-1x;
+    @extend .fa-inverse
+}
