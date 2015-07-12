@@ -7,6 +7,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "Highest level of education completed",
             "detailsVisible" : false,
             "type": "discrete",
+            "required": true,
             "states": ["none", "High School", "Associates", "Bachlors", "Masters", "PhD"]
         },
         {
@@ -14,6 +15,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "Individual's average income per year",
             "detailsVisible" : false,
             "type": "number",
+            "required": true,
             "rangeMin": 0,
         },
         {
@@ -21,6 +23,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "Household's average income per year",
             "detailsVisible" : false,
             "type": "number",
+            "required": true,
             "rangeMin": 0,
         },
         {
@@ -35,6 +38,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description" : "Self-identified sex of the individual",
             "detailsVisible" : false,
             "type": "discrete",
+            "required": true,
             "states": ["male", "female", "intersexed"]
         },
         {
@@ -42,6 +46,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "Registered political party affiliation",
             "detailsVisible" : false,
             "type": "discrete",
+            "required": true,
             "states": ["Democrat", "republican", "Libertarian", "Independent", "Other"]
         },
         {
@@ -49,6 +54,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "The year the individual was born",
             "detailsVisible" : false,
             "type": "number",
+            "required": true,
             "rangeMax": 2015
         },
         {
@@ -56,6 +62,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "Primary field of employment",
             "detailsVisible" : false,
             "type": "discrete",
+            "required": true,
             "states": ["Health Care", "Science", "Information Technology", "Service Industry", "Other"]
         },
         {
@@ -63,6 +70,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "Country the individual spends most of their time per year",
             "detailsVisible" : false,
             "type": "discrete",
+            "required": true,
             "states": ["United Stated of America", "Canada", "Mexico", "Other"]
         },
         {
@@ -70,6 +78,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "Number of children the individual has as a dependency",
             "detailsVisible" : false,
             "type": "number",
+            "required": true,
             "rangeMin": 0,
         },
         {
@@ -77,6 +86,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "The individuals current relationship status",
             "detailsVisible" : false,
             "type": "discrete",
+            "required": true,
             "states": ["Single", "Married", "Seperated", "Widowed", "In relationship"]
         },
         {
@@ -84,6 +94,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "description": "Indicates the individuals citizenship status",
             "detailsVisible" : false,
             "type": "discrete",
+            "required": true,
             "states": ["Citizen", "Green Card Holder", "Visa Holder", "Other"]
         }
     ];
