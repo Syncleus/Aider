@@ -27,14 +27,14 @@
     <div class="analyzer-nav">
         <nav role="navigation">
             <ul class="analyzer-nav-group">
-                <li class="analyzer-nav-item selected">
-                    <a href="#">
+                <li class="analyzer-nav-item" ng-class="{selected: navSelected == 'dataModel'}">
+                    <a ui-sref="analyzer.dataModel">
                         <span class="analyzer-data-model-icon"></span> Data model
                     </a>
                 </li>
 
                 <li class="analyzer-nav-item">
-                    <a href="#">
+                    <a>
                         <span class="analyzer-datastore-icon"></span> Datastore
                     </a>
                 </li>
