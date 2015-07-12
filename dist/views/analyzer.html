@@ -56,6 +56,13 @@
             <div class="analyzer-nav-separator"></div>
 
             <ul class="analyzer-nav-group">
+                <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'discovery'}">
+                    <a ui-sref="analyzer.discovery">
+                        <span class="analyzer-discovery-icon"></span> Discovery
+                        <span class="counter">3</span>
+                    </a>
+                </li>
+
                 <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'insights'}">
                     <a ui-sref="analyzer.insights">
                         <span class="analyzer-insights-icon"></span> Insights

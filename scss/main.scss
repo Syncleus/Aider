@@ -363,6 +363,11 @@ footer div {
     @extend .octicon-radio-tower;
 }
 
+.analyzer-discovery-icon {
+    @extend .octicon;
+    @extend .octicon-search;
+}
+
 .analyzer-insights-icon {
     @extend .octicon;
     @extend .octicon-eye;

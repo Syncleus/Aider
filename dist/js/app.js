@@ -51,6 +51,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'analyzer.endpoints',
             templateUrl: 'views/analyzer.endpoints.html'
         })
+        .state('analyzer.discovery', {
+            url: '/discovery',
+            controller: 'analyzer.discovery',
+            templateUrl: 'views/analyzer.discovery.html'
+        })
         .state('analyzer.insights', {
             url: '/insights',
             controller: 'analyzer.insights',
