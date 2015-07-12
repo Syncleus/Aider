@@ -4,17 +4,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/',
-            controller: 'homeController',
+            controller: 'home',
             templateUrl: 'views/home.html'
         })
         .state('charts', {
             url: '/charts',
-            controller: 'chartsController',
+            controller: 'charts',
             templateUrl: 'views/charts.html'
         })
         .state('userToggle', {
             url: '/userToggle',
-            controller: 'userToggleController',
+            controller: 'userToggle',
             templateUrl: 'views/userToggle.html'
         })
         .state('lorem', {
@@ -23,17 +23,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('analyzer', {
             url: '/analyzer',
-            controller: 'analyzerController',
+            controller: 'analyzer',
             templateUrl: 'views/analyzer.html'
         })
         .state('analyzer.dataModel', {
             url: '/dataModel',
-            controller: 'dataModelController',
+            controller: 'analyzer.dataModel',
             templateUrl: 'views/analyzer.dataModel.html'
         })
         .state('details', {
             url: '/uppercase/:name',
-            controller: 'uppercaseController',
+            controller: 'uppercase',
             templateUrl: 'views/uppercase.html'
         });
     $urlRouterProvider.otherwise('/');

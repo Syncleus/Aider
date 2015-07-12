@@ -1,4 +1,4 @@
-app.controller('chartsController', ['$scope', function ($scope) {
+app.controller('charts', ['$scope', function ($scope) {
 
     //$scope.exampleData = [
     //    {

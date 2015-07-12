@@ -1,4 +1,4 @@
-app.controller('headerController', ['$scope', 'user', function($scope, user) {
+app.controller('header', ['$scope', 'user', function($scope, user) {
     $scope.user = user;
 
     $scope.unreadNotifications = false;

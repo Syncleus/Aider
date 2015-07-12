@@ -1,4 +1,4 @@
-app.controller('dataModelController', ['$scope', function ($scope) {
+app.controller('analyzer.dataModel', ['$scope', function ($scope) {
     $scope.datapoints = [
         {
             "key": "educationMax",
