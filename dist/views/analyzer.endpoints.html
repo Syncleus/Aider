@@ -1,1 +1,38 @@
-Endpoints place holder!
+<div style="border: 1px solid #d0d0d0; border-radius: 5px; border-collapse: separate;background-color: #f5f5f5;">
+    <div style="padding: 10px;">
+        <h1>Datapoint receiver</h1>
+    </div>
+    <div style="background-color: #ffffff; padding: 10px;">
+        <div><span style="border: 2px solid #d0d0d0; padding: 2px 7px; border-radius: 4px;">POST</span> https://aide.syncleus.com/robotek/customers/receiver</div>
+        <hr/>
+        Request parameters
+        <table>
+            <tbody>
+            <tr ng-repeat-start="datapoint in datapoints">
+                <td><i class="fa fa-circle" style="color: #bbbbbb; padding-right: 10px; padding-top: 10px;"></i></td>
+                <td style="padding-right: 10px; padding-top: 10px;">{{datapoint.key}}</td>
+                <td style="padding-right: 10px; padding-top: 10px;">{{datapoint.type}}</td>
+                <td style="padding-top: 10px;">{{datapoint.description}}</td>
+            </tr>
+            <tr ng-repeat-end="">
+                <td colspan="3"></td>
+                <td ng-if="datapoint.type == 'number'"><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
+                <td ng-if="datapoint.type == 'discrete'">{{datapoint.states}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr/>
+        <div style="padding-bottom: 10px;">Request example</div>
+        <div>Content-Type: application/json</div>
+        <div>{</div>
+        <div ng-repeat="datapoint in datapoints" style="padding-left: 20px;">"{{datapoint.key}}": "Hello world",</div>
+        <div>}</div>
+        <hr/>
+        <div style="padding-bottom: 10px;">Response example</div>
+        <div><span>201</span> Datapoint successfully recorded.</div>
+        <div>Content-Type: application/json</div>
+        <div>{</div>
+        <div style="padding-left: 20px;">"responseMessage": "Success!",</div>
+        <div>}</div>
+    </div>
+</div>
