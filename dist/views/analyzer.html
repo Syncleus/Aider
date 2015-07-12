@@ -27,27 +27,27 @@
     <div class="analyzer-nav">
         <nav role="navigation">
             <ul class="analyzer-nav-group">
-                <li class="analyzer-nav-item" ng-class="{selected: navSelected == 'dataModel'}">
-                    <a ng-click="selectNav('dataModel')" ui-sref="analyzer.dataModel">
+                <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'dataModel'}">
+                    <a ui-sref="analyzer.dataModel">
                         <span class="analyzer-data-model-icon"></span> Data model
                     </a>
                 </li>
 
-                <li class="analyzer-nav-item" ng-class="{selected: navSelected == 'datastore'}">
-                    <a ng-click="selectNav('datastore')" ui-sref="analyzer.datastore">
+                <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'datastore'}">
+                    <a ui-sref="analyzer.datastore">
                         <span class="analyzer-datastore-icon"></span> Datastore
                     </a>
                 </li>
 
-                <li class="analyzer-nav-item" ng-class="{selected: navSelected == 'fitness'}">
-                    <a ng-click="selectNav('fitness')" ui-sref="analyzer.fitness">
+                <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'fitness'}">
+                    <a ui-sref="analyzer.fitness">
                         <span class="analyzer-fitness-icon"></span> Fitness
                         <span class="counter">0</span>
                     </a>
                 </li>
 
-                <li class="analyzer-nav-item" ng-class="{selected: navSelected == 'endpoints'}">
-                    <a ng-click="selectNav('endpoints')" ui-sref="analyzer.endpoints">
+                <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'endpoints'}">
+                    <a ui-sref="analyzer.endpoints">
                         <span class="analyzer-endpoints-icon"></span> Endpoints
                     </a>
                 </li>
@@ -56,21 +56,21 @@
             <div class="analyzer-nav-separator"></div>
 
             <ul class="analyzer-nav-group">
-                <li class="analyzer-nav-item" ng-class="{selected: navSelected == 'insights'}">
-                    <a ng-click="selectNav('insights')" ui-sref="analyzer.insights">
+                <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'insights'}">
+                    <a ui-sref="analyzer.insights">
                         <span class="analyzer-insights-icon"></span> Insights
                         <span class="counter">0</span>
                     </a>
                 </li>
 
-                <li class="analyzer-nav-item" ng-class="{selected: navSelected == 'traffic'}">
-                    <a ng-click="selectNav('traffic')" ui-sref="analyzer.traffic">
+                <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'traffic'}">
+                    <a ui-sref="analyzer.traffic">
                         <span class="analyzer-traffic-icon"></span> Traffic
                     </a>
                 </li>
 
-                <li class="analyzer-nav-item" ng-class="{selected: navSelected == 'statistics'}">
-                    <a ng-click="selectNav('statistics')" ui-sref="analyzer.statistics">
+                <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'statistics'}">
+                    <a ui-sref="analyzer.statistics">
                         <span class="analyzer-statistics-icon"></span> Statistics
                     </a>
                 </li>
@@ -79,8 +79,8 @@
             <div class="analyzer-nav-separator"></div>
 
             <ul class="analyzer-nav-group">
-                <li class="analyzer-nav-item" ng-class="{selected: navSelected == 'configure'}">
-                    <a ng-click="selectNav('configure')" ui-sref="analyzer.configure">
+                <li class="analyzer-nav-item" ng-class="{selected: analyzerNav.navSelected == 'configure'}">
+                    <a ui-sref="analyzer.configure">
                         <span class="analyzer-configure-icon"></span> Configure
                     </a>
                 </li>

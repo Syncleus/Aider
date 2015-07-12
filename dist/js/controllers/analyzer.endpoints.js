@@ -1,2 +1,3 @@
-app.controller('analyzer.endpoints', ['$scope', function ($scope) {
+app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', function ($scope, analyzerNav) {
+    analyzerNav.navSelected = "endpoints";
 }]);

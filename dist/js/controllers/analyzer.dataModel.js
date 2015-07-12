@@ -1,4 +1,6 @@
-app.controller('analyzer.dataModel', ['$scope', function ($scope) {
+app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope, analyzerNav) {
+    analyzerNav.navSelected = "dataModel";
+
     $scope.datapoints = [
         {
             "key": "educationMax",

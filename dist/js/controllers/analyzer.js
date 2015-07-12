@@ -1,7 +1,3 @@
-app.controller('analyzer', ['$scope', function ($scope) {
-    $scope.navSelected = "dataModel";
-
-    $scope.selectNav = function(newNav) {
-        $scope.navSelected = newNav;
-    };
+app.controller('analyzer', ['$scope', 'analyzerNav', function ($scope, analyzerNav) {
+    $scope.analyzerNav = analyzerNav;
 }]);
