@@ -1,8 +1,8 @@
 <div class="analyzer-header">
     <div class="analyzer-title">
         <div class="analyzer-icon">
-          <i class="analyzer-icon-bottom"></i>
-          <i class="analyzer-icon-top"></i>
+            <i class="analyzer-icon-bottom"></i>
+            <i class="analyzer-icon-top"></i>
         </div>
 
         <div class="analyzer-title-text">
@@ -23,42 +23,7 @@
 <hr/>
 
 <div class="analyzer-container">
-    <div class="analyzer-content">
-        <div class="expand-collapse-links"><a ng-click="selectAllDataModelKeys()">Expand all</a> <a ng-click="unselectAllDataModelKeys()">Collapse all</a></div>
-        <table class="data-model-table">
-            <tbody>
-                <tr class="data-model-table-key-row"  ng-class='{selected: datapoint.detailsVisible}' ng-click="selectDataModelKey($index)" ng-repeat-start="datapoint in datapoints">
-                    <td><span class="data-model-table-expand-icon"></span></td>
-                    <td>{{datapoint.key}}</td>
-                    <td>{{datapoint.description}}</td>
-                </tr>
-                <tr class="data-model-table-details-row"  ng-class='{selected: datapoint.detailsVisible}' ng-repeat-end>
-                    <td colspan="3">
-                        <table>
-                            <tbody>
-                                <tr class="data-model-details-text">
-                                    <td>Description:</td>
-                                    <td>{{datapoint.description}}</td>
-                                </tr>
-                                <tr class="data-model-details-text">
-                                    <td>Type:</td>
-                                    <td>{{datapoint.type}}</td>
-                                </tr>
-                                <tr class="data-model-details-text" ng-if="datapoint.states != null">
-                                    <td>States:</td>
-                                    <td>{{datapoint.states}}</td>
-                                </tr>
-                                <tr class="data-model-details-text" ng-if="datapoint.type == 'number'">
-                                    <td>Range:</td>
-                                    <td><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="analyzer-content" ui-view></div>
     <div class="analyzer-nav">
         <nav role="navigation">
             <ul class="analyzer-nav-group">

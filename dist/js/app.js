@@ -5,31 +5,36 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('home', {
             url: '/',
             controller: 'homeController',
-            templateUrl: 'views/homeView.html'
+            templateUrl: 'views/home.html'
         })
         .state('charts', {
             url: '/charts',
             controller: 'chartsController',
-            templateUrl: 'views/chartsView.html'
+            templateUrl: 'views/charts.html'
         })
         .state('userToggle', {
             url: '/userToggle',
             controller: 'userToggleController',
-            templateUrl: 'views/userToggleView.html'
+            templateUrl: 'views/userToggle.html'
         })
         .state('lorem', {
             url: '/lorem',
-            templateUrl: 'views/loremView.html'
+            templateUrl: 'views/lorem.html'
         })
-        .state('dataModel', {
+        .state('analyzer', {
+            url: '/analyzer',
+            controller: 'analyzerController',
+            templateUrl: 'views/analyzer.html'
+        })
+        .state('analyzer.dataModel', {
             url: '/dataModel',
             controller: 'dataModelController',
-            templateUrl: 'views/dataModelView.html'
+            templateUrl: 'views/analyzer.dataModel.html'
         })
         .state('details', {
             url: '/uppercase/:name',
             controller: 'uppercaseController',
-            templateUrl: 'views/uppercaseView.html'
+            templateUrl: 'views/uppercase.html'
         });
     $urlRouterProvider.otherwise('/');
 });
