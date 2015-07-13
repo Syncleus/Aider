@@ -459,6 +459,7 @@ footer div {
     border-radius: 5px;
     border-collapse: separate;
     background-color: #f5f5f5;
+    margin-bottom: 25px;
 }
 
 .datapoint-title {
@@ -470,10 +471,31 @@ footer div {
     padding: 10px;
 }
 
-.datapoint-http-method.post-method {
+.datapoint-http-method {
     border: 2px solid #d0d0d0;
     padding: 2px 7px;
     border-radius: 4px;
+    font-weight: bold;
+}
+
+.datapoint-http-method.delete-method {
+    border-color: #f8c3b6;
+    color: #a10000;
+}
+
+.datapoint-http-method.post-method {
+    border-color: #c0bff8;
+    color: #0800a1;
+}
+
+.datapoint-http-method.put-method {
+    border-color: #f8bef4;
+    color: #a1009b;
+}
+
+.datapoint-http-method.get-method {
+    border-color: #a6d29f;
+    color: #03a100;
 }
 
 .datapoint-required.optional {

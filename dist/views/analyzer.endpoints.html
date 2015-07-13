@@ -36,3 +36,121 @@
         <div>}</div>
     </div>
 </div>
+
+<div class="datapoint-container">
+    <div class="datapoint-title">
+        <h1>Insight detection</h1>
+    </div>
+    <div class="datapoint-details">
+        <div><span class="datapoint-http-method get-method">GET</span> https://aide.syncleus.com/robotek/customers/insight</div>
+        <hr/>
+        Request parameters
+        <table>
+            <tbody>
+            <tr ng-repeat-start="datapoint in datapoints">
+                <td><i class="datapoint-cell datapoint-required optional"></i></td>
+                <td class="datapoint-cell">{{datapoint.key}}</td>
+                <td class="datapoint-cell">{{datapoint.type}}</td>
+                <td class="datapoint-cell">{{datapoint.description}}</td>
+            </tr>
+            <tr ng-repeat-end="">
+                <td colspan="3"></td>
+                <td ng-if="datapoint.type == 'number'"><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
+                <td ng-if="datapoint.type == 'discrete'">{{datapoint.states}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr/>
+        <div style="padding-bottom: 10px;">Request example</div>
+        <div>Content-Type: application/json</div>
+        <div>{</div>
+        <div ng-repeat="datapoint in datapoints" style="padding-left: 20px;">"{{datapoint.key}}": "Hello world",</div>
+        <div>}</div>
+        <hr/>
+        <div style="padding-bottom: 10px;">Response example</div>
+        <div><span>201</span> Datapoint successfully recorded.</div>
+        <div>Content-Type: application/json</div>
+        <div>{</div>
+        <div style="padding-left: 20px;">"responseMessage": "Success!",</div>
+        <div>}</div>
+    </div>
+</div>
+
+
+<div class="datapoint-container">
+    <div class="datapoint-title">
+        <h1>Discovery example1</h1>
+    </div>
+    <div class="datapoint-details">
+        <div><span class="datapoint-http-method get-method">GET</span> https://aide.syncleus.com/robotek/customers/discovery/example1</div>
+        <hr/>
+        Request parameters
+        <table>
+            <tbody>
+            <tr ng-repeat-start="datapoint in datapoints">
+                <td><i class="datapoint-cell datapoint-required optional"></i></td>
+                <td class="datapoint-cell">{{datapoint.key}}</td>
+                <td class="datapoint-cell">{{datapoint.type}}</td>
+                <td class="datapoint-cell">{{datapoint.description}}</td>
+            </tr>
+            <tr ng-repeat-end="">
+                <td colspan="3"></td>
+                <td ng-if="datapoint.type == 'number'"><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
+                <td ng-if="datapoint.type == 'discrete'">{{datapoint.states}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr/>
+        <div style="padding-bottom: 10px;">Request example</div>
+        <div>Content-Type: application/json</div>
+        <div>{</div>
+        <div ng-repeat="datapoint in datapoints" style="padding-left: 20px;">"{{datapoint.key}}": "Hello world",</div>
+        <div>}</div>
+        <hr/>
+        <div style="padding-bottom: 10px;">Response example</div>
+        <div><span>201</span> Datapoint successfully recorded.</div>
+        <div>Content-Type: application/json</div>
+        <div>{</div>
+        <div style="padding-left: 20px;">"responseMessage": "Success!",</div>
+        <div>}</div>
+    </div>
+</div>
+
+<div class="datapoint-container">
+    <div class="datapoint-title">
+        <h1>Discovery example2</h1>
+    </div>
+    <div class="datapoint-details">
+        <div><span class="datapoint-http-method get-method">GET</span> https://aide.syncleus.com/robotek/customers/discovery/example2</div>
+        <hr/>
+        Request parameters
+        <table>
+            <tbody>
+            <tr ng-repeat-start="datapoint in datapoints">
+                <td><i class="datapoint-cell datapoint-required optional"></i></td>
+                <td class="datapoint-cell">{{datapoint.key}}</td>
+                <td class="datapoint-cell">{{datapoint.type}}</td>
+                <td class="datapoint-cell">{{datapoint.description}}</td>
+            </tr>
+            <tr ng-repeat-end="">
+                <td colspan="3"></td>
+                <td ng-if="datapoint.type == 'number'"><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
+                <td ng-if="datapoint.type == 'discrete'">{{datapoint.states}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr/>
+        <div style="padding-bottom: 10px;">Request example</div>
+        <div>Content-Type: application/json</div>
+        <div>{</div>
+        <div ng-repeat="datapoint in datapoints" style="padding-left: 20px;">"{{datapoint.key}}": "Hello world",</div>
+        <div>}</div>
+        <hr/>
+        <div style="padding-bottom: 10px;">Response example</div>
+        <div><span>201</span> Datapoint successfully recorded.</div>
+        <div>Content-Type: application/json</div>
+        <div>{</div>
+        <div style="padding-left: 20px;">"responseMessage": "Success!",</div>
+        <div>}</div>
+    </div>
+</div>
