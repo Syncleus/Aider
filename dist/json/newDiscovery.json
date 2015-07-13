@@ -1,0 +1,5 @@
+{
+    "filter": "educationMax==(Masters|PhD)&&age>=18",
+    "target": "personalIncome > 10000 && politicalParty == (Republican | Libertarian)",
+    "capacity": 100
+}

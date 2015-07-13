@@ -47,7 +47,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "detailsVisible" : false,
             "type": "discrete",
             "required": true,
-            "states": ["Democrat", "republican", "Libertarian", "Independent", "Other"]
+            "states": ["Democrat", "Republican", "Libertarian", "Independent", "other"]
         },
         {
             "key": "birthYear",

@@ -41,7 +41,7 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', function ($scope,
             "description": "Registered political party affiliation",
             "type": "discrete",
             "required": true,
-            "states": ["Democrat", "republican", "Libertarian", "Independent", "Other"]
+            "states": ["Democrat", "Republican", "Libertarian", "Independent", "other"]
         },
         {
             "key": "birthYear",
