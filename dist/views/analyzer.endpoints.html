@@ -1,18 +1,18 @@
-<div style="border: 1px solid #d0d0d0; border-radius: 5px; border-collapse: separate;background-color: #f5f5f5;">
-    <div style="padding: 10px;">
+<div class="datapoint-container">
+    <div class="datapoint-title">
         <h1>Datapoint receiver</h1>
     </div>
-    <div style="background-color: #ffffff; padding: 10px;">
-        <div><span style="border: 2px solid #d0d0d0; padding: 2px 7px; border-radius: 4px;">POST</span> https://aide.syncleus.com/robotek/customers/receiver</div>
+    <div class="datapoint-details">
+        <div><span class="datapoint-http-method post-method">POST</span> https://aide.syncleus.com/robotek/customers/receiver</div>
         <hr/>
         Request parameters
         <table>
             <tbody>
             <tr ng-repeat-start="datapoint in datapoints">
-                <td><i class="fa fa-circle" style="color: #bbbbbb; padding-right: 10px; padding-top: 10px;"></i></td>
-                <td style="padding-right: 10px; padding-top: 10px;">{{datapoint.key}}</td>
-                <td style="padding-right: 10px; padding-top: 10px;">{{datapoint.type}}</td>
-                <td style="padding-top: 10px;">{{datapoint.description}}</td>
+                <td><i class="datapoint-cell datapoint-required optional"></i></td>
+                <td class="datapoint-cell">{{datapoint.key}}</td>
+                <td class="datapoint-cell">{{datapoint.type}}</td>
+                <td class="datapoint-cell">{{datapoint.description}}</td>
             </tr>
             <tr ng-repeat-end="">
                 <td colspan="3"></td>

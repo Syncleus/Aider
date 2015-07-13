@@ -453,3 +453,36 @@ footer div {
 .expand-collapse-links a:first-child {
     margin-left: 0;
 }
+
+.datapoint-container {
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    border-collapse: separate;
+    background-color: #f5f5f5;
+}
+
+.datapoint-title {
+    padding: 10px;
+}
+
+.datapoint-details {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.datapoint-http-method.post-method {
+    border: 2px solid #d0d0d0;
+    padding: 2px 7px;
+    border-radius: 4px;
+}
+
+.datapoint-required.optional {
+    @extend .fa;
+    @extend .fa-circle;
+    color: #bbbbbb;
+}
+
+.datapoint-cell {
+    padding-right: 10px;
+    padding-top: 10px;
+}
