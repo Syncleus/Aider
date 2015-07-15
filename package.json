@@ -18,7 +18,7 @@
     "license": {
         "type": "Proprietary"
     },
-    "name": "AIDE",
+    "name": "Aider",
     "private": true,
     "scripts": {
         "build": "./build-clean.sh && bower update && ./build-copyfiles.sh && node-sass --importer ./node_modules/node-sass-import-once/index.js scss/main.scss dist/css/main.css",
