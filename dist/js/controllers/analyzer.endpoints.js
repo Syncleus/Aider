@@ -87,11 +87,28 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
         }
     ];
 
+    exampleDatapointValue = function(datapoint) {
+        if(datapoint.type == "discrete") {
+            return datapoint.states[0];
+        }
+
+        if(datapoint.type == "number") {
+            if(datapoint.rangeMin != null) {
+                return datapoint.rangeMin;
+            }
+            else if(datapoint.rangeMax != null) {
+                return datapoint.rangeMax;
+            }
+            else {
+                return 0;
+            }
+        }
+    };
 
     $scope.prettyDatapoints = function() {
         var datapointsJson = "{";
         for( x in $scope.datapoints ) {
-            datapointsJson += "\"" + $scope.datapoints[x].key + "\" : \"Hello World\",";
+            datapointsJson += "\"" + $scope.datapoints[x].key + "\" : \"" + exampleDatapointValue($scope.datapoints[x]) + "\",";
         }
         datapointsJson += "}";
 
