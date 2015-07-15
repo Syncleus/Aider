@@ -12,7 +12,6 @@
         "angular-ui-router": "latest",
         "angularjs-nvd3-directives": "latest",
         "angular-highlightjs": "latest",
-        "highlightjs-line-numbers.js": "latest",
         "highlightjs": "latest"
     },
     "resolutions": {

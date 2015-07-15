@@ -22,4 +22,3 @@ cp bower_components/nvd3/nv.d3.min.js dist/js/vendor
 cp bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.min.js dist/js/vendor
 cp bower_components/highlightjs/highlight.pack.js dist/js/vendor
 cp bower_components/angular-highlightjs/angular-highlightjs.min.js dist/js/vendor
-cp bower_components/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js dist/js/vendor
