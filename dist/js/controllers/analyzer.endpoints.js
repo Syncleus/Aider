@@ -87,6 +87,27 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
         }
     ];
 
+    $scope.prettyDatapoints = function() {
+        var datapointsJson = "{";
+        for( x in $scope.datapoints ) {
+            datapointsJson += "\"" + $scope.datapoints[x].key + "\" : \"" + exampleDatapointValue($scope.datapoints[x]) + "\",";
+        }
+        datapointsJson += "}";
+
+        return toPrettyJSON(datapointsJson, 4);
+    };
+
+    $scope.prettySuccessResponse = function() {
+        var successJson = "{\"responseMessage\" : \"Success!\"}";
+        return toPrettyJSON(successJson, 4);
+    };
+
+    toPrettyJSON = function (jsonStr, tabWidth) {
+        var parsedStr = $parse(jsonStr)({});
+        var result = JSON.stringify(parsedStr, null, Number(tabWidth));
+        return result;
+    };
+
     exampleDatapointValue = function(datapoint) {
         if(datapoint.type == "discrete") {
             return datapoint.states[0];
@@ -103,21 +124,5 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
                 return 0;
             }
         }
-    };
-
-    $scope.prettyDatapoints = function() {
-        var datapointsJson = "{";
-        for( x in $scope.datapoints ) {
-            datapointsJson += "\"" + $scope.datapoints[x].key + "\" : \"" + exampleDatapointValue($scope.datapoints[x]) + "\",";
-        }
-        datapointsJson += "}";
-
-        return toPrettyJSON(datapointsJson, 4);
-    };
-
-    toPrettyJSON = function (jsonStr, tabWidth) {
-        var parsedStr = $parse(jsonStr)({});
-        var result = JSON.stringify(parsedStr, null, Number(tabWidth));
-        return result;
     };
 }]);
