@@ -87,6 +87,7 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
         }
     ];
 
+
     $scope.prettyDatapoints = function() {
         var datapointsJson = "{";
         for( x in $scope.datapoints ) {
@@ -94,10 +95,10 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
         }
         datapointsJson += "}";
 
-        return $scope.toPrettyJSON(datapointsJson, 4);
+        return toPrettyJSON(datapointsJson, 4);
     };
 
-    $scope.toPrettyJSON = function (jsonStr, tabWidth) {
+    toPrettyJSON = function (jsonStr, tabWidth) {
         var parsedStr = $parse(jsonStr)({});
         var result = JSON.stringify(parsedStr, null, Number(tabWidth));
         return result;
