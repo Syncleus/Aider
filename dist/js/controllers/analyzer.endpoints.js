@@ -1,4 +1,4 @@
-app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', function ($scope, analyzerNav) {
+app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', function ($scope, analyzerNav, $parse) {
     analyzerNav.navSelected = "endpoints";
 
     $scope.datapoints = [
@@ -86,4 +86,20 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', function ($scope,
             "states": ["Citizen", "Green Card Holder", "Visa Holder", "Other"]
         }
     ];
+
+    $scope.prettyDatapoints = function() {
+        var datapointsJson = "{";
+        for( x in $scope.datapoints ) {
+            datapointsJson += "\"" + $scope.datapoints[x].key + "\" : \"Hello World\",";
+        }
+        datapointsJson += "}";
+
+        return $scope.toPrettyJSON(datapointsJson, 4);
+    };
+
+    $scope.toPrettyJSON = function (jsonStr, tabWidth) {
+        var parsedStr = $parse(jsonStr)({});
+        var result = JSON.stringify(parsedStr, null, Number(tabWidth));
+        return result;
+    };
 }]);
