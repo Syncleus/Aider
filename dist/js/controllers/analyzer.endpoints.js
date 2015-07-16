@@ -99,7 +99,7 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
     };
 
     $scope.prettySuccessResponseExample = function() {
-        var successJson = "{\"responseMessage\" : \"Ran in 0.054 seconds\"}";
+        var successJson = "{\"responseMessage\" : \"Execution completed in 0.054 seconds\"}";
         return toPrettyJSON(successJson, 4);
     };
 
@@ -114,7 +114,7 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
     }
 
     $scope.prettySuccessResponseInsightExample = function() {
-        var successJson = "{\"responseMessage\" : \"Ran in 0.032 seconds\", \"probability\": \"0.89\"}";
+        var successJson = "{\"responseMessage\" : \"Execution completed in 0.032 seconds\", \"probability\": \"0.89\"}";
         return toPrettyJSON(successJson, 4);
     };
 
