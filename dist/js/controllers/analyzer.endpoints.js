@@ -27,6 +27,7 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
             "key": "race",
             "description" : "The race the individual identifies with",
             "type": "discrete",
+            "required": false,
             "states": ["Caucasion", "African", "Hispanic", "Native American", "Other"]
         },
         {

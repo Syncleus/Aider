@@ -30,6 +30,7 @@ app.controller('analyzer.dataModel', ['$scope', 'analyzerNav', function ($scope,
             "key": "race",
             "description" : "The race the individual identifies with",
             "detailsVisible" : false,
+            "required": false,
             "type": "discrete",
             "states": ["Caucasion", "African", "Hispanic", "Native American", "Other"]
         },
