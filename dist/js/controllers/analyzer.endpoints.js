@@ -88,7 +88,7 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
         }
     ];
 
-    $scope.prettyDatapoints = function() {
+    $scope.prettyDatapointsReceiverExample = function() {
         var datapointsJson = "{";
         for( x in $scope.datapoints ) {
             datapointsJson += "\"" + $scope.datapoints[x].key + "\" : \"" + exampleDatapointValue($scope.datapoints[x]) + "\",";
@@ -98,8 +98,18 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
         return toPrettyJSON(datapointsJson, 4);
     };
 
-    $scope.prettySuccessResponse = function() {
-        var successJson = "{\"responseMessage\" : \"Success!\"}";
+    $scope.prettySuccessResponseExample = function() {
+        var successJson = "{\"responseMessage\" : \"Ran in 0.054 seconds\"}";
+        return toPrettyJSON(successJson, 4);
+    };
+
+    $scope.prettyInsightExample = function() {
+        var insightJson = "{\"given\": {\"educationMax\": \"Masters\",\"birthYear\": \"1980\"},\"target\": \"personalIncome > 100000 && politicalParty = Democrat\"}";
+        return toPrettyJSON(insightJson, 4);
+    }
+
+    $scope.prettySuccessResponseInsightExample = function() {
+        var successJson = "{\"responseMessage\" : \"Ran in 0.032 seconds\", \"probability\": \"0.89\"}";
         return toPrettyJSON(successJson, 4);
     };
 

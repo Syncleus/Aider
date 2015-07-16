@@ -1,0 +1,7 @@
+{
+    "given": {
+        "educationMax": "Masters",
+        "birthYear": "1980"
+    },
+    "target": "personalIncome > 100000 && politicalParty = Democrat"
+}

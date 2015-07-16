@@ -14,7 +14,7 @@
                 <td class="datapoint-cell">{{datapoint.type}}</td>
                 <td class="datapoint-cell">{{datapoint.description}}</td>
             </tr>
-            <tr ng-repeat-end="">
+            <tr ng-repeat-end>
                 <td colspan="3"></td>
                 <td ng-if="datapoint.type == 'number'"><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
                 <td ng-if="datapoint.type == 'discrete'">{{datapoint.states}}</td>
@@ -24,18 +24,18 @@
         <hr/>
         <div style="padding-bottom: 10px;">Request example</div>
         <div>Content-Type: application/json</div>
-        <div hljs source="prettyDatapoints()"></div>
+        <div hljs source="prettyDatapointsReceiverExample()"></div>
         <hr/>
         <div style="padding-bottom: 10px;">Response example</div>
         <div><span>201</span> Datapoint successfully recorded.</div>
         <div>Content-Type: application/json</div>
-        <div hljs source="prettySuccessResponse()"></div>
+        <div hljs source="prettySuccessResponseExample()"></div>
     </div>
 </div>
 
 <div class="datapoint-container">
     <div class="datapoint-title">
-        <h1>Insight detection</h1>
+        <h1>Insight analysis</h1>
     </div>
     <div class="datapoint-details">
         <div><span class="datapoint-http-method get-method">GET</span> https://aide.syncleus.com/robotek/customers/insight</div>
@@ -43,28 +43,49 @@
         Request parameters
         <table>
             <tbody>
-            <tr ng-repeat-start="datapoint in datapoints">
+            <tr>
                 <td><i class="datapoint-cell datapoint-required optional"></i></td>
-                <td class="datapoint-cell">{{datapoint.key}}</td>
-                <td class="datapoint-cell">{{datapoint.type}}</td>
-                <td class="datapoint-cell">{{datapoint.description}}</td>
+                <td class="datapoint-cell">given</td>
+                <td class="datapoint-cell">Map</td>
+                <td class="datapoint-cell">A map describing the known properties of the datapoint</td>
             </tr>
-            <tr ng-repeat-end="">
-                <td colspan="3"></td>
-                <td ng-if="datapoint.type == 'number'"><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
-                <td ng-if="datapoint.type == 'discrete'">{{datapoint.states}}</td>
+            <tr>
+                <td></td>
+                <td colspan="4">
+                    <table>
+                        <tbody>
+                        <tr ng-repeat-start="datapoint in datapoints">
+                            <td><i class="datapoint-cell datapoint-required optional"></i></td>
+                            <td class="datapoint-cell">{{datapoint.key}}</td>
+                            <td class="datapoint-cell">{{datapoint.type}}</td>
+                            <td class="datapoint-cell">{{datapoint.description}}</td>
+                        </tr>
+                        <tr ng-repeat-end>
+                            <td colspan="3"></td>
+                            <td ng-if="datapoint.type == 'number'"><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
+                            <td ng-if="datapoint.type == 'discrete'">{{datapoint.states}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="datapoint-cell datapoint-required optional"></i></td>
+                <td class="datapoint-cell">target</td>
+                <td class="datapoint-cell">String</td>
+                <td class="datapoint-cell">A string indicating the boolean logic for the fields being analyzed for.</td>
             </tr>
             </tbody>
         </table>
         <hr/>
         <div style="padding-bottom: 10px;">Request example</div>
         <div>Content-Type: application/json</div>
-        <div hljs source="prettyDatapoints()"></div>
+        <div hljs source="prettyInsightExample()"></div>
         <hr/>
         <div style="padding-bottom: 10px;">Response example</div>
-        <div><span>201</span> Datapoint successfully recorded.</div>
+        <div><span>201</span> Insight successfully analyzed.</div>
         <div>Content-Type: application/json</div>
-        <div hljs source="prettySuccessResponse()"></div>
+        <div hljs source="prettySuccessResponseInsightExample()"></div>
     </div>
 </div>
 
@@ -95,12 +116,12 @@
         <hr/>
         <div style="padding-bottom: 10px;">Request example</div>
         <div>Content-Type: application/json</div>
-        <div hljs source="prettyDatapoints()"></div>
+        <div hljs source="prettyDatapointsReceiverExample()"></div>
         <hr/>
         <div style="padding-bottom: 10px;">Response example</div>
         <div><span>201</span> Datapoint successfully recorded.</div>
         <div>Content-Type: application/json</div>
-        <div hljs source="prettySuccessResponse()"></div>
+        <div hljs source="prettySuccessResponseExample()"></div>
     </div>
 </div>
 
@@ -130,11 +151,11 @@
         <hr/>
         <div style="padding-bottom: 10px;">Request example</div>
         <div>Content-Type: application/json</div>
-        <div hljs source="prettyDatapoints()"></div>
+        <div hljs source="prettyDatapointsReceiverExample()"></div>
         <hr/>
         <div style="padding-bottom: 10px;">Response example</div>
         <div><span>201</span> Datapoint successfully recorded.</div>
         <div>Content-Type: application/json</div>
-        <div hljs source="prettySuccessResponse()"></div>
+        <div hljs source="prettySuccessResponseExample()"></div>
     </div>
 </div>
