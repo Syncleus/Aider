@@ -9,7 +9,7 @@
         <table>
             <tbody>
             <tr ng-repeat-start="datapoint in datapoints">
-                <td><i class="datapoint-cell datapoint-required" ng-class="{require: datapoint.required == true, optional: datapoint.required == false}"></i></td>
+                <td><i class="datapoint-cell datapoint-requisite" ng-class="{required: datapoint.required == true, optional: datapoint.required == false}"></i></td>
                 <td class="datapoint-cell">{{datapoint.key}}</td>
                 <td class="datapoint-cell">{{datapoint.type}}</td>
                 <td class="datapoint-cell">{{datapoint.description}}</td>
@@ -44,7 +44,7 @@
         <table>
             <tbody>
             <tr>
-                <td><i class="datapoint-cell datapoint-required require"></i></td>
+                <td><i class="datapoint-cell datapoint-requisite required"></i></td>
                 <td class="datapoint-cell">given</td>
                 <td class="datapoint-cell">Map</td>
                 <td class="datapoint-cell">A map describing the known properties of the datapoint</td>
@@ -55,7 +55,7 @@
                     <table>
                         <tbody>
                         <tr ng-repeat-start="datapoint in datapoints">
-                            <td><i class="datapoint-cell datapoint-required optional"></i></td>
+                            <td><i class="datapoint-cell datapoint-requisite optional"></i></td>
                             <td class="datapoint-cell">{{datapoint.key}}</td>
                             <td class="datapoint-cell">{{datapoint.type}}</td>
                             <td class="datapoint-cell">{{datapoint.description}}</td>
@@ -70,10 +70,10 @@
                 </td>
             </tr>
             <tr>
-                <td><i class="datapoint-cell datapoint-required require"></i></td>
+                <td><i class="datapoint-cell datapoint-requisite required"></i></td>
                 <td class="datapoint-cell">target</td>
-                <td class="datapoint-cell">String</td>
-                <td class="datapoint-cell">A string indicating the boolean logic for the fields being analyzed for.</td>
+                <td class="datapoint-cell">string</td>
+                <td class="datapoint-cell">A string specifying the boolean logic for the desired fields.</td>
             </tr>
             </tbody>
         </table>
@@ -92,31 +92,64 @@
 
 <div class="datapoint-container">
     <div class="datapoint-title">
-        <h1>Discovery example1</h1>
+        <h1>Discovery creation</h1>
     </div>
     <div class="datapoint-details">
-        <div><span class="datapoint-http-method get-method">GET</span> https://aide.syncleus.com/robotek/customers/discovery/example1</div>
+        <div><span class="datapoint-http-method post-method">POST</span> https://aide.syncleus.com/robotek/customers/discovery</div>
         <hr/>
         Request parameters
         <table>
             <tbody>
-            <tr ng-repeat-start="datapoint in datapoints">
-                <td><i class="datapoint-cell datapoint-required optional"></i></td>
-                <td class="datapoint-cell">{{datapoint.key}}</td>
-                <td class="datapoint-cell">{{datapoint.type}}</td>
-                <td class="datapoint-cell">{{datapoint.description}}</td>
+            <tr>
+                <td><i class="datapoint-cell datapoint-requisite required"></i></td>
+                <td class="datapoint-cell">name</td>
+                <td class="datapoint-cell">string</td>
+                <td class="datapoint-cell">Name for the discovery being created</td>
             </tr>
-            <tr ng-repeat-end="">
+            <tr>
+                <td><i class="datapoint-cell datapoint-requisite optional"></i></td>
+                <td class="datapoint-cell">description</td>
+                <td class="datapoint-cell">string</td>
+                <td class="datapoint-cell">Description for the discovery being created</td>
+            </tr>
+            <tr>
+                <td><i class="datapoint-cell datapoint-requisite optional"></i></td>
+                <td class="datapoint-cell">filter</td>
+                <td class="datapoint-cell">string</td>
+                <td class="datapoint-cell">A string specifying the boolean logic for filtering datapoints being analyzed.</td>
+            </tr>
+            <tr>
+                <td><i class="datapoint-cell datapoint-requisite required"></i></td>
+                <td class="datapoint-cell">target</td>
+                <td class="datapoint-cell">string</td>
+                <td class="datapoint-cell">A string specifying the boolean logic for the desired fields.</td>
+            </tr>
+            <tr>
+                <td><i class="datapoint-cell datapoint-requisite required"></i></td>
+                <td class="datapoint-cell">capacity</td>
+                <td class="datapoint-cell">number</td>
+                <td class="datapoint-cell">The number of top matching datapoints to retain.</td>
+            </tr>
+            <tr>
                 <td colspan="3"></td>
-                <td ng-if="datapoint.type == 'number'"><span ng-if="datapoint.rangeMin != null">{{datapoint.rangeMin}}</span><span ng-if="datapoint.rangeMin == null">-&infin;</span> to <span ng-if="datapoint.rangeMax != null">{{datapoint.rangeMax}}</span><span ng-if="datapoint.rangeMax == null">&infin;</span></td>
-                <td ng-if="datapoint.type == 'discrete'">{{datapoint.states}}</td>
+                <td>1 to &infin;</td>
+            </tr>
+            <tr>
+                <td><i class="datapoint-cell datapoint-requisite optional"></i></td>
+                <td class="datapoint-cell">historyDepth</td>
+                <td class="datapoint-cell">number</td>
+                <td class="datapoint-cell">The maximum number of datapoints to learn from already stored in the datastore.</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>0 to &infin;</td>
             </tr>
             </tbody>
         </table>
         <hr/>
         <div style="padding-bottom: 10px;">Request example</div>
         <div>Content-Type: application/json</div>
-        <div hljs source="prettyDatapointsReceiverExample()"></div>
+        <div hljs source="prettyDiscoveryCreation()"></div>
         <hr/>
         <div style="padding-bottom: 10px;">Response example</div>
         <div><span>201</span> Datapoint successfully recorded.</div>
@@ -127,16 +160,16 @@
 
 <div class="datapoint-container">
     <div class="datapoint-title">
-        <h1>Discovery example2</h1>
+        <h1>Discovery example1</h1>
     </div>
     <div class="datapoint-details">
-        <div><span class="datapoint-http-method get-method">GET</span> https://aide.syncleus.com/robotek/customers/discovery/example2</div>
+        <div><span class="datapoint-http-method get-method">GET</span> https://aide.syncleus.com/robotek/customers/discovery/example1</div>
         <hr/>
         Request parameters
         <table>
             <tbody>
             <tr ng-repeat-start="datapoint in datapoints">
-                <td><i class="datapoint-cell datapoint-required optional"></i></td>
+                <td><i class="datapoint-cell datapoint-require optional"></i></td>
                 <td class="datapoint-cell">{{datapoint.key}}</td>
                 <td class="datapoint-cell">{{datapoint.type}}</td>
                 <td class="datapoint-cell">{{datapoint.description}}</td>

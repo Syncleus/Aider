@@ -1,5 +1,8 @@
 {
-    "filter": "educationMax==(Masters|PhD)&&age>=18",
+    "title": "Some new fangled discover",
+    "Description": "This discovery discovers stuff which wasnt previously discovered.",
+    "filter": "educationMax=(Masters|PhD)&&age>=18",
     "target": "personalIncome > 10000 && politicalParty == (Republican | Libertarian)",
-    "capacity": 100
+    "capacity": 100,
+    "historyDepth": 1000
 }

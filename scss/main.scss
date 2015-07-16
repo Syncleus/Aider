@@ -499,16 +499,16 @@ footer div {
     color: #03a100;
 }
 
-.datapoint-required {
+.datapoint-requisite {
     @extend .fa;
     @extend .fa-circle;
 }
 
-.datapoint-required.optional {
+.datapoint-requisite.optional {
     color: #bbbbbb;
 }
 
-.datapoint-required.require {
+.datapoint-requisite.required {
     color: $important-alert-color;
 }
 

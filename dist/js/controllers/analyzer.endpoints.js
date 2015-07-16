@@ -108,6 +108,11 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
         return toPrettyJSON(insightJson, 4);
     }
 
+    $scope.prettyDiscoveryCreation = function() {
+        var discoveryCreationJson = "{\"name\":\"highIncomeConservatives\",\"Description\":\"Customers with highest probability of being high-income conservatives.\",\"filter\":\"educationMax=(Masters|PhD)&&age>=18\",\"target\":\"personalIncome > 10000 && politicalParty == (Republican | Libertarian)\",\"capacity\":100,\"historyDepth\":1000}";
+        return toPrettyJSON(discoveryCreationJson, 4);
+    }
+
     $scope.prettySuccessResponseInsightExample = function() {
         var successJson = "{\"responseMessage\" : \"Ran in 0.032 seconds\", \"probability\": \"0.89\"}";
         return toPrettyJSON(successJson, 4);
