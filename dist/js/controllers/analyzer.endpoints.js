@@ -41,7 +41,7 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
             "key": "politicalParty",
             "description": "Registered political party affiliation",
             "type": "discrete",
-            "required": true,
+            "required": false,
             "states": ["Democrat", "Republican", "Libertarian", "Independent", "other"]
         },
         {
@@ -55,7 +55,7 @@ app.controller('analyzer.endpoints', ['$scope', 'analyzerNav', '$parse', functio
             "key": "profession",
             "description": "Primary field of employment",
             "type": "discrete",
-            "required": true,
+            "required": false,
             "states": ["Health Care", "Science", "Information Technology", "Service Industry", "Other"]
         },
         {
