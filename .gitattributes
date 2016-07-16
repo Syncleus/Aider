@@ -1,4 +1,1 @@
-* eol=lf
-*.bat eol=crlf
-*.sh eol=lf
-.git* export-ignore
+* text=auto
